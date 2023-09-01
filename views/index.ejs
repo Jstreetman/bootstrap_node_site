@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="/styles/landing.css">
+
+  <title>Hotel</title>
+</head>
+
+
+<body>
+  <%- include('partials/navbar.ejs') %>
+
+    <!-- Showcase Hotel -->
+    <section class="p-5 text-light  p-lg-0 pt-lg-5 text-center text-sm-start" style="background-color: #007BFF;">
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h1>Become a <span class="text-warning"> Resident </span>Of <span class="text-light">Opulent Horzions</span>
+            </h1>
+            <p class="lead my-4">
+              We specialize in providing our guests with a foundational understanding of the most cutting-edge
+              amenities, ensuring they are well-prepared for an unforgettable stay experience at our luxury hotel.
+            </p>
+            <button class="btn showcase text-light btn-lg" data-bs-toggle="modal" data-bs-target="#enroll">
+              Book A Room
+            </button>
+          </div>
+          <img class="img-fluid w-50 d-none rounded-5 d-sm-block"
+            src="https://fastly.picsum.photos/id/193/3578/2451.jpg?hmac=M5yoazhwdwMa_27rC5-S50SNFvCy4Kni0wXoa6iVF0g"
+            alt="hotelimage" />
+        </div>
+      </div>
+    </section>
+
+    <!-- End of Showcase -->
+
+
+    <!-- Amenities -->
+
+    <section id="amenities" class="p-5">
+      <h1 class="lead my-4 fw-bolder text-center" style="color: #007BFF; font-size: xx-large;">The Amenities</h1>
+      <p class="lead my-3 fw-bolder text-center" style="color: #007BFF;">Indulge in the privilege of exclusive access to
+        our
+        exceptional range
+        of amenities that have
+        been meticulously crafted to cater to your every desire. From the moment you step into our lavish abode, you'll
+        be greeted by an ambiance that exudes sophistication and warmth.</p>
+      <div class="container">
+        <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner rounded">
+            <div class="carousel-item active">
+              <img
+                src="https://fastly.picsum.photos/id/328/3264/2448.jpg?hmac=rR8AM7aOiJkj7PHfKTv_1H0_2Mmi2tYEuXvKR1S0wNU"
+                class="d-block w-100" alt="zipline">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Explore</h5>
+                <p>Venture Off And Explore The Town Via Ziplining.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://fastly.picsum.photos/id/395/4080/2720.jpg?hmac=6ybpNpyHLfr4TMOiCDCk-hXBFVHPrOnOc5k-QIrspjY"
+                class="d-block w-100" alt="buffetimage">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>24/7 All You Can Eat</h5>
+                <p>Dine On Us At Our In-house 5 Star Buffett. And It's Free! </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://fastly.picsum.photos/id/446/3072/1728.jpg?hmac=62VykY0FNeXxvrUhPIGiucHvYI1qd_VzMTmk98U-D5Y"
+                class="d-block w-100" alt="swimmingimage">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Swim</h5>
+                <p>Some representative placeholder content for the third slide.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- End of Amenities -->
+
+
+    <!-- Booking -->
+    <section class="forrm p-5" id="book">
+      <div class="container">
+        <div class="container forrm rounded">
+
+          <h1 class="my-4 lead fw-bolder text-center" style="color: #007BFF ; font-size: xx-large;">Book A Room</h1>
+          <form class="container">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control " id="firstName" placeholder="Enter your first name" required>
+              </div>
+              <div class="form-group ">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control " id="lastName" placeholder="Enter your last name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control " id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="checkIn">Check-In Date</label>
+              <input type="date" class="form-control " id="checkIn" required>
+            </div>
+            <div class="form-group">
+              <label for="checkOut">Check-Out Date</label>
+              <input type="date" class="form-control " id="checkOut" required>
+            </div>
+            <div class="form-group">
+              <label for="roomType">Room Type</label>
+              <select class="form-control border-primary" id="roomType">
+                <option value="single">Single Room</option>
+                <option value="double">Double Room</option>
+                <option value="suite">Suite</option>
+              </select>
+            </div>
+            <div class="form-group ">
+              <label class="text-dark card-text" for="specialRequests">Special Requests</label>
+              <textarea class="form-control border-primary" id="specialRequests" rows="4"
+                placeholder="Any special requests or comments"></textarea>
+            </div>
+            <button type="submit" class="btn book text-light mt-4 container-fluid mb-3">Book
+              Now</button>
+          </form>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- End of Booking Form -->
+
+    <!-- About Us -->
+
+    <section class="p-5" id="about">
+      <div class="container">
+        <div class="jumbotron card " style="border-color: #007BFF;">
+          <div class="card-header text-center" style="background: #007BFF;">
+            <h1 class="display-4 fw-bolder text-light">Opulent Horizons</h1>
+            <p class="lead text-center fw-bolder text-light">A Tranquil Retreat in the Heart of Bali</p>
+
+
+          </div>
+
+          <div class="card-body">
+            <p class="card-text lead text-dark-emphasis text-start">
+              Welcome to Opulent Horizons, your luxurious escape to the enchanting island of Bali. Nestled in the lush
+              greenery of Ubud, our hotel offers you a sanctuary of serenity amidst nature's beauty. Discover the
+              perfect
+              blend of traditional Balinese hospitality and modern comfort. Whether you're here for
+              a
+              romantic getaway, a family vacation, or a business retreat, Opulent Horizons promises an unforgettable
+              experience. Our spacious and elegantly designed rooms, gourmet dining options, and rejuvenating spa
+              treatments await
+              you. Explore the rich culture and natural wonders of Bali, or simply unwind by the pool surrounded by
+              tropical gardens. At Opulent Horizons, we're dedicated to making your stay extraordinary. Your journey
+              begins here, where
+              luxury meets paradise.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- End of About -->
+
+
+    <!-- Contact Form -->
+
+    <section class="p-5" id="contact">
+      <div class="container">
+        <div class="container card border-primary">
+          <div class="container mt-5">
+            <h2 class="fw-bolder" style="color: #007BFF;">Contact Us</h2>
+            <form>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"
+                  required></textarea>
+              </div>
+              <button type="submit" class="btn book text-light mt-4 container-fluid mb-3">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- End of Contact -->
+
+    <!-- Footer -->
+    <%- include('partials/footer.ejs') %>
+
+</body>
+
+</html>
